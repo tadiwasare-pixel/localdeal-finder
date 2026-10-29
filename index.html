@@ -44,11 +44,9 @@
     #map{position:absolute;top:0;left:0;right:0;bottom:0;z-index:0}
     .leaflet-top.leaflet-right{top:148px!important;right:10px!important}
 
-    /* ============ OFFLINE ============ */
     .offline-banner{position:fixed;top:0;left:0;right:0;z-index:4000;background:linear-gradient(135deg,#ef4444,#dc2626);color:#fff;padding:8px 16px;font-size:.8rem;font-weight:700;text-align:center;transform:translateY(-100%);transition:transform .3s}
     .offline-banner.visible{transform:translateY(0)}
 
-    /* ============ HEADER ============ */
     .glass-header{position:absolute;top:16px;left:16px;right:16px;z-index:1020;background:rgba(255,255,255,.96);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-radius:var(--r-lg);padding:12px 18px;box-shadow:var(--shadow-xl);border:1px solid rgba(255,255,255,.7)}
     .header-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
     .logo-area h1{font-size:1.15rem;font-weight:800;background:linear-gradient(135deg,#0f2b3d,#2563eb,#3b82f6);background-clip:text;-webkit-background-clip:text;color:transparent;letter-spacing:-.5px}
@@ -66,7 +64,6 @@
     .search-wrapper .search-clear{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--gray-200);border:none;width:24px;height:24px;border-radius:var(--r-full);color:var(--gray-500);font-size:.7rem;cursor:pointer;display:none;align-items:center;justify-content:center}
     .search-wrapper .search-clear.visible{display:flex}
 
-    /* ============ MODE PILL (unique) ============ */
     .mode-pill{position:absolute;top:150px;left:50%;transform:translateX(-50%);z-index:1020;display:flex;gap:4px;padding:4px;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:var(--r-full);box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.7)}
     .mode-btn{display:flex;align-items:center;gap:6px;padding:8px 12px;border:none;background:transparent;border-radius:var(--r-full);font-family:inherit;font-weight:700;font-size:.72rem;color:var(--gray-600);cursor:pointer;transition:all .25s cubic-bezier(.4,0,.2,1);white-space:nowrap}
     .mode-btn i{font-size:.85rem}
@@ -77,7 +74,6 @@
     .mode-btn.active[data-mode="jobs"]{background:linear-gradient(135deg,#10b981,#059669);box-shadow:0 4px 12px rgba(16,185,129,.35)}
     .mode-btn.active[data-mode="match"]{background:linear-gradient(135deg,#f59e0b,#d97706);box-shadow:0 4px 12px rgba(245,158,11,.35)}
 
-    /* ============ CARD DECK (unique) ============ */
     .card-deck{position:absolute;bottom:0;left:0;right:0;z-index:1015;padding-bottom:env(safe-area-inset-bottom);pointer-events:none;transition:transform .3s cubic-bezier(.4,0,.2,1)}
     .card-deck.hidden{transform:translateY(120%);pointer-events:none}
     .deck-header{display:flex;justify-content:space-between;align-items:center;padding:8px 20px;pointer-events:auto}
@@ -107,7 +103,6 @@
     .deck-card-actions button.fav.favorited{background:#fef2f2;color:var(--danger)}
     .deck-card-actions button.view{background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff}
 
-    /* ============ BOTTOM SHEET ============ */
     .bottom-sheet{position:absolute;bottom:0;left:0;right:0;z-index:1015;background:#fff;border-radius:var(--r-lg) var(--r-lg) 0 0;height:60vh;display:none;flex-direction:column;box-shadow:0 -16px 40px rgba(0,0,0,.12);padding-bottom:env(safe-area-inset-bottom);transition:height .3s cubic-bezier(.4,0,.2,1)}
     .bottom-sheet.visible{display:flex}
     .bottom-sheet.expanded{height:88vh}
@@ -119,7 +114,6 @@
     .sheet-content::-webkit-scrollbar{width:4px}
     .sheet-content::-webkit-scrollbar-thumb{background:var(--gray-300);border-radius:var(--r-full)}
 
-    /* ============ FAB + BMC ============ */
     .fab-add{position:absolute;right:20px;width:56px;height:56px;background:linear-gradient(145deg,#3b82f6,#2563eb);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;box-shadow:0 12px 28px rgba(37,99,235,.4);cursor:pointer;z-index:1030;border:none;transition:all .25s cubic-bezier(.4,0,.2,1)}
     .fab-add:hover{transform:scale(1.08) rotate(90deg)}
     .fab-add:active{transform:scale(.94)}
@@ -130,7 +124,6 @@
     .bmc-btn:active{transform:scale(.94)}
     .bmc-btn::after{content:'';position:absolute;inset:-6px;border:2px solid rgba(245,158,11,.4);border-radius:50%;animation:pulse 2.5s ease-out infinite;z-index:-1}
 
-    /* Dynamic positioning */
     body[data-mode="discover"] .fab-add,body[data-mode="discover"] .bmc-btn{bottom:calc(var(--deck-h) + 40px + env(safe-area-inset-bottom))}
     body[data-mode="jobs"] .fab-add,body[data-mode="match"] .fab-add,
     body[data-mode="jobs"] .bmc-btn,body[data-mode="match"] .bmc-btn{bottom:calc(60vh + 16px + env(safe-area-inset-bottom))}
@@ -143,7 +136,6 @@
     .recenter-btn:active{transform:scale(.96)}
     body[data-mode="jobs"] .recenter-btn,body[data-mode="match"] .recenter-btn{display:none}
 
-    /* ============ JOB CARD ============ */
     .job-card{background:#fff;border-radius:var(--r-md);padding:16px;margin-bottom:12px;border:1px solid var(--gray-100);box-shadow:var(--shadow-sm);cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
     .job-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
     .job-card.matched{border:2px solid rgba(245,158,11,.4)}
@@ -168,7 +160,6 @@
     .match-badge.fair{background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff}
     .match-badge.low{background:var(--gray-200);color:var(--gray-600)}
 
-    /* ============ MATCH RADAR (unique) ============ */
     .match-radar{display:flex;align-items:center;gap:16px;background:linear-gradient(135deg,#fef3c7,#fde68a);border-radius:var(--r-md);padding:16px;margin-bottom:16px;border:1.5px solid rgba(245,158,11,.3);position:relative;overflow:hidden}
     .match-radar::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#f59e0b,#fbbf24,#f59e0b);background-size:200% auto;animation:shimmer 2s linear infinite}
     .match-radar-ring{width:76px;height:76px;border-radius:50%;background:conic-gradient(#10b981 0% var(--match-pct,0%),rgba(255,255,255,.4) var(--match-pct,0%) 100%);display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
@@ -179,7 +170,6 @@
     .match-radar-title{font-size:.92rem;font-weight:800;color:var(--dark);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     .match-radar-sub{font-size:.72rem;color:#78350f;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
-    /* ============ MODALS ============ */
     .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2000;display:flex;align-items:flex-end;justify-content:center;visibility:hidden;opacity:0;transition:all .3s}
     .modal-overlay.active{visibility:visible;opacity:1}
     .modal-overlay.active .modal-card{transform:translateY(0)}
@@ -288,7 +278,6 @@
     .apply-method .apply-title{font-weight:800;font-size:.88rem;color:var(--dark)}
     .apply-method .apply-desc{font-size:.72rem;color:var(--gray-500);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
-    /* ============ COFFEE MODAL ============ */
     .coffee-options{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
     .coffee-opt{background:linear-gradient(135deg,#fffbeb,#fef3c7);border:2px solid rgba(245,158,11,.3);border-radius:var(--r-md);padding:16px 8px;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;display:flex;flex-direction:column;align-items:center;gap:6px}
     .coffee-opt:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow-md)}
@@ -297,13 +286,11 @@
     .coffee-opt .coffee-label{font-size:.75rem;font-weight:700;color:var(--gray-700)}
     .coffee-opt .coffee-amount{font-size:1rem;font-weight:800;color:var(--accent-dark)}
 
-    /* ============ EMPTY / LISTING CARD ============ */
     .empty-state{text-align:center;padding:40px 20px;color:var(--gray-400)}
     .empty-state i{font-size:3rem;margin-bottom:12px;display:block;color:var(--gray-300)}
     .empty-state h3{font-size:1rem;color:var(--gray-600);font-weight:700;margin-bottom:6px}
     .empty-state p{font-size:.85rem;max-width:240px;margin:0 auto 16px}
 
-    /* ============ TOAST ============ */
     .toast-container{position:fixed;top:80px;left:50%;transform:translateX(-50%) translateY(-20px);z-index:3000;display:flex;flex-direction:column;gap:8px;pointer-events:none;opacity:0;transition:all .3s}
     .toast-container.visible{opacity:1;transform:translateX(-50%) translateY(0)}
     .toast{background:var(--dark);color:#fff;padding:12px 20px;border-radius:var(--r-full);font-size:.85rem;font-weight:600;box-shadow:var(--shadow-xl);display:flex;align-items:center;gap:8px;animation:slideDown .3s ease;pointer-events:auto;max-width:90vw}
@@ -360,7 +347,6 @@
 <div id="map"></div>
 <div class="toast-container" id="toastContainer"></div>
 
-<!-- HEADER -->
 <div class="glass-header">
   <div class="header-row">
     <div class="logo-area">
@@ -379,14 +365,12 @@
   </div>
 </div>
 
-<!-- MODE PILL -->
 <div class="mode-pill" role="tablist">
   <button class="mode-btn active" data-mode="discover" role="tab"><i class="fas fa-compass"></i><span>Discover</span></button>
   <button class="mode-btn" data-mode="jobs" role="tab"><i class="fas fa-briefcase"></i><span>Jobs</span></button>
   <button class="mode-btn" data-mode="match" role="tab"><i class="fas fa-magic"></i><span>Match</span></button>
 </div>
 
-<!-- DISCOVER: HORIZONTAL CARD DECK -->
 <div class="card-deck" id="cardDeck">
   <div class="deck-header">
     <span class="deck-count" id="deckCounter">0 of 0</span>
@@ -395,7 +379,6 @@
   <div class="deck-track" id="deckTrack"></div>
 </div>
 
-<!-- JOBS / MATCH: BOTTOM SHEET -->
 <div class="bottom-sheet" id="bottomSheet">
   <div class="sheet-handle" id="sheetHandle"></div>
   <div class="sheet-header">
@@ -409,7 +392,6 @@
 <button class="recenter-btn" id="recenterBtn"><i class="fas fa-location-arrow"></i> Me</button>
 <button class="bmc-btn" id="bmcBtn" title="Buy me a coffee" aria-label="Buy me a coffee"><i class="fas fa-mug-hot"></i></button>
 
-<!-- FILTER MODAL -->
 <div id="filterModal" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-header"><span><i class="fas fa-sliders-h"></i> Filter</span><button class="modal-close close-modal">&times;</button></div>
@@ -420,7 +402,6 @@
   </div>
 </div>
 
-<!-- PROFILE MODAL -->
 <div id="profileModal" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-header"><span><i class="fas fa-user-circle"></i> My Account</span><button class="modal-close close-modal">&times;</button></div>
@@ -428,7 +409,6 @@
   </div>
 </div>
 
-<!-- ADD LISTING MODAL -->
 <div id="addListingModal" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-header"><span id="addModalTitle"><i class="fas fa-plus-circle"></i> New listing</span><button class="modal-close close-modal">&times;</button></div>
@@ -469,7 +449,6 @@
   </div>
 </div>
 
-<!-- DETAILS MODAL -->
 <div id="detailsModal" class="modal-overlay">
   <div class="modal-card" style="max-height:92vh;">
     <div class="modal-header"><span id="detailTitle">Listing</span><button class="modal-close close-modal">&times;</button></div>
@@ -477,7 +456,6 @@
   </div>
 </div>
 
-<!-- LOCATION PICKER -->
 <div id="locationPickerModal" class="modal-overlay">
   <div class="modal-card modal-wide">
     <div class="modal-header"><span><i class="fas fa-map-pin"></i> Drag pin</span><button class="modal-close close-modal" id="closePickerBtn">&times;</button></div>
@@ -486,7 +464,6 @@
   </div>
 </div>
 
-<!-- PORTFOLIO MODAL -->
 <div id="portfolioModal" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-header"><span><i class="fas fa-id-card"></i> My Portfolio</span><button class="modal-close close-modal">&times;</button></div>
@@ -538,7 +515,6 @@
   </div>
 </div>
 
-<!-- JOB DETAIL MODAL -->
 <div id="jobDetailModal" class="modal-overlay">
   <div class="modal-card" style="max-height:92vh;">
     <div class="modal-header"><span id="jobDetailTitle">Job</span><button class="modal-close close-modal">&times;</button></div>
@@ -546,7 +522,6 @@
   </div>
 </div>
 
-<!-- POST JOB MODAL -->
 <div id="postJobModal" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-header"><span><i class="fas fa-plus-circle"></i> Post a job</span><button class="modal-close close-modal">&times;</button></div>
@@ -564,7 +539,6 @@
   </div>
 </div>
 
-<!-- APPLY MODAL -->
 <div id="applyModal" class="modal-overlay">
   <div class="modal-card modal-wide">
     <div class="modal-header"><span><i class="fas fa-paper-plane"></i> Apply</span><button class="modal-close close-modal">&times;</button></div>
@@ -572,27 +546,14 @@
   </div>
 </div>
 
-<!-- BUY ME A COFFEE MODAL -->
 <div id="bmcModal" class="modal-overlay">
   <div class="modal-card modal-wide">
     <div class="modal-header"><span><i class="fas fa-mug-hot" style="color:var(--accent);"></i> Buy me a coffee</span><button class="modal-close close-modal">&times;</button></div>
     <p style="font-size:.88rem;color:var(--gray-600);text-align:center;line-height:1.6;">This app is <strong>100% free</strong> — no ads, no premium plans. If it helped you, you can buy me a coffee to keep it running.</p>
     <div class="coffee-options" id="coffeeOptions">
-      <button class="coffee-opt" data-cups="1" data-amount="1">
-        <i class="fas fa-mug-hot coffee-icon"></i>
-        <span class="coffee-label">1 cup</span>
-        <span class="coffee-amount">$1</span>
-      </button>
-      <button class="coffee-opt selected" data-cups="3" data-amount="3">
-        <i class="fas fa-mug-hot coffee-icon"></i>
-        <span class="coffee-label">3 cups</span>
-        <span class="coffee-amount">$3</span>
-      </button>
-      <button class="coffee-opt" data-cups="5" data-amount="5">
-        <i class="fas fa-mug-hot coffee-icon"></i>
-        <span class="coffee-label">5 cups</span>
-        <span class="coffee-amount">$5</span>
-      </button>
+      <button class="coffee-opt" data-cups="1" data-amount="1"><i class="fas fa-mug-hot coffee-icon"></i><span class="coffee-label">1 cup</span><span class="coffee-amount">$1</span></button>
+      <button class="coffee-opt selected" data-cups="3" data-amount="3"><i class="fas fa-mug-hot coffee-icon"></i><span class="coffee-label">3 cups</span><span class="coffee-amount">$3</span></button>
+      <button class="coffee-opt" data-cups="5" data-amount="5"><i class="fas fa-mug-hot coffee-icon"></i><span class="coffee-label">5 cups</span><span class="coffee-amount">$5</span></button>
     </div>
     <div class="ecocash-card">
       <i class="fas fa-mobile-alt" style="font-size:1.2rem;color:#059669;"></i>
@@ -709,36 +670,71 @@ function checkRateLimit(key, max = 5) {
   return true;
 }
 
-// ==================== MAP (robust offset-based centering) ====================
-function getMapInsets() {
+// ==================== MAP CENTERING (bulletproof) ====================
+// Returns how many pixels of the map are covered at top and bottom by UI.
+function getMapOverlaySizes() {
+  const mapEl = document.getElementById('map');
+  if (!mapEl) return { top: 0, bottom: 0 };
+  const mapRect = mapEl.getBoundingClientRect();
+
   const header = document.querySelector('.glass-header');
-  const topInset = (header?.getBoundingClientRect().bottom || 130) + 10;
-  let bottomInset = 0;
+  const top = header
+    ? Math.max(0, header.getBoundingClientRect().bottom - mapRect.top + 10)
+    : 0;
+
+  let bottom = 0;
   if (activeMode === 'discover') {
     const deck = document.getElementById('cardDeck');
-    bottomInset = deck?.getBoundingClientRect().height || 250;
+    if (deck && !deck.classList.contains('hidden')) {
+      bottom = Math.max(0, mapRect.bottom - deck.getBoundingClientRect().top + 10);
+    }
   } else {
     const sheet = document.getElementById('bottomSheet');
-    bottomInset = sheet?.getBoundingClientRect().height || window.innerHeight * 0.6;
+    if (sheet && sheet.classList.contains('visible')) {
+      bottom = Math.max(0, mapRect.bottom - sheet.getBoundingClientRect().top + 10);
+    }
   }
-  return { topInset, bottomInset };
+  return { top, bottom };
 }
 
-function panToWithOffset(lat, lng, zoom = 15, animate = true) {
-  if (!map || typeof lat !== 'number' || typeof lng !== 'number' || isNaN(lat) || isNaN(lng)) return;
+// Center (lat,lng) so the pin lands in the VISIBLE strip between header + bottom UI.
+// Math:
+//   top    = pixels covered by header
+//   bottom = pixels covered by deck/sheet
+//   visibleCenterY = top + (mapHeight - top - bottom) / 2
+//   mapCenterY     = mapHeight / 2
+//   delta = visibleCenterY - mapCenterY
+//         = (bottom - top) / 2
+//   panBy([0, -delta]) moves content DOWN by delta → use +delta because
+//   panBy positive Y pans view south = content moves UP on screen.
+function centerMap(lat, lng, zoom = 15, animate = false) {
+  if (!map) return;
+  if (typeof lat !== 'number' || typeof lng !== 'number' || isNaN(lat) || isNaN(lng)) return;
+
+  const size = map.getSize();
+  if (size.x < 50 || size.y < 50) {
+    setTimeout(() => centerMap(lat, lng, zoom, animate), 200);
+    return;
+  }
+
   try {
-    const size = map.getSize();
-    if (size.y < 100) { setTimeout(() => panToWithOffset(lat, lng, zoom, animate), 150); return; }
+    map.invalidateSize();
+    const { top, bottom } = getMapOverlaySizes();
+    const dy = (bottom - top) / 2;
+
     map.setView([lat, lng], zoom, { animate: false });
-    const { topInset, bottomInset } = getMapInsets();
-    const delta = (topInset - bottomInset) / 2;
-    if (Math.abs(delta) > 2) {
-      map.panBy([0, delta], { animate });
+    if (Math.abs(dy) > 2) {
+      map.panBy([0, dy], { animate });
     }
   } catch (e) {
-    console.error('panToWithOffset:', e);
+    console.error('centerMap error:', e);
     try { map.setView([lat, lng], zoom); } catch (e2) {}
   }
+}
+
+// Legacy alias so other calls don't break
+function panToWithOffset(lat, lng, zoom = 15, animate = true) {
+  centerMap(lat, lng, zoom, animate);
 }
 
 function initMapAndLocation() {
@@ -771,19 +767,30 @@ function initMapAndLocation() {
     map.addLayer(markerClusterGroup);
 
     // Multiple invalidateSize calls to catch layout settling
-    setTimeout(() => map.invalidateSize(), 0);
-    setTimeout(() => map.invalidateSize(), 100);
-    setTimeout(() => map.invalidateSize(), 400);
-    setTimeout(() => map.invalidateSize(), 1000);
+    [0, 100, 400, 1000, 2000].forEach(ms =>
+      setTimeout(() => map && map.invalidateSize(), ms));
+
+    // Auto-resize on ANY layout change
+    if (window.ResizeObserver) {
+      const ro = new ResizeObserver(() => { if (map) map.invalidateSize(); });
+      ro.observe(mapEl);
+      const header = document.querySelector('.glass-header');
+      const deck = document.getElementById('cardDeck');
+      const sheet = document.getElementById('bottomSheet');
+      if (header) ro.observe(header);
+      if (deck) ro.observe(deck);
+      if (sheet) ro.observe(sheet);
+    }
 
     window.addEventListener('resize', () => map && map.invalidateSize());
-    window.addEventListener('orientationchange', () => setTimeout(() => map && map.invalidateSize(), 300));
+    window.addEventListener('orientationchange', () =>
+      setTimeout(() => map && map.invalidateSize(), 300));
 
     const ready = () => { renderMapMarkers(); renderActiveMode(); tryHandleDeepLink(); };
     const fallback = () => {
       userLocation = { lat: -17.825, lng: 31.033 };
       showToast('Using default location', 'info', 2500);
-      panToWithOffset(userLocation.lat, userLocation.lng, 13);
+      centerMap(userLocation.lat, userLocation.lng, 13, false);
       placeUserMarker();
       ready();
     };
@@ -804,7 +811,7 @@ function initMapAndLocation() {
         pos => {
           userLocation = { lat: pos.coords.latitude, lng: pos.coords.longitude };
           placeUserMarker();
-          panToWithOffset(userLocation.lat, userLocation.lng, 15);
+          centerMap(userLocation.lat, userLocation.lng, 15, false);
           ready();
         },
         fallback,
@@ -814,7 +821,8 @@ function initMapAndLocation() {
 
     document.getElementById('recenterBtn').addEventListener('click', () => {
       if (!userLocation) { showToast('Location unavailable', 'error'); return; }
-      panToWithOffset(userLocation.lat, userLocation.lng, 15, true);
+      map.invalidateSize();
+      centerMap(userLocation.lat, userLocation.lng, 15, true);
       showToast('Recentered', 'success', 1500);
     });
   } catch (e) {
@@ -838,7 +846,18 @@ function renderMapMarkers() {
       </div>`, { closeButton: false, offset: [0, -5] });
     marker.on('click', () => {
       openDetailModal(l.id);
-      if (l.lat && l.lng) panToWithOffset(l.lat, l.lng, Math.max(map.getZoom(), 15), true);
+      // Only recenter if pin is actually hidden behind header or deck
+      try {
+        const p = map.latLngToContainerPoint([l.lat, l.lng]);
+        const { top, bottom } = getMapOverlaySizes();
+        const mapH = map.getSize().y;
+        const inVisibleStrip = p.y > top && p.y < (mapH - bottom);
+        if (!inVisibleStrip) {
+          centerMap(l.lat, l.lng, Math.max(map.getZoom(), 15), true);
+        }
+      } catch (e) {
+        centerMap(l.lat, l.lng, Math.max(map.getZoom(), 15), true);
+      }
     });
     markerClusterGroup.addLayer(marker);
   });
@@ -871,10 +890,13 @@ function switchMode(mode) {
     if (mode === 'jobs') { loadJobsIfNeeded().then(renderJobsSheet); }
     else { loadPortfolio().then(renderMatchSheet); }
   }
+
+  // Wait for CSS transitions (250-300ms) to finish before re-centering
   setTimeout(() => {
-    if (map) map.invalidateSize();
-    if (userLocation) panToWithOffset(userLocation.lat, userLocation.lng, map.getZoom(), false);
-  }, 320);
+    if (!map) return;
+    map.invalidateSize();
+    if (userLocation) centerMap(userLocation.lat, userLocation.lng, map.getZoom(), false);
+  }, 380);
 }
 
 function renderActiveMode() {
@@ -883,7 +905,7 @@ function renderActiveMode() {
   else renderMatchSheet();
 }
 
-// ==================== CARD DECK (unique) ====================
+// ==================== CARD DECK ====================
 function getFilteredListings() {
   let f = allListings.map(l => ({ ...l, distance: distTo(l) }));
   if (filters.category) f = f.filter(l => l.category === filters.category);
@@ -939,7 +961,6 @@ function renderCardDeck() {
   counter.textContent = `1 of ${deckListings.length}`;
   activeDeckIndex = 0;
 
-  // Tap handlers
   track.querySelectorAll('.deck-card').forEach(card => {
     card.addEventListener('click', e => {
       if (e.target.closest('.fav')) return;
@@ -957,7 +978,7 @@ function renderCardDeck() {
 
   // Center map on first card after render
   if (deckListings[0]?.lat && deckListings[0]?.lng) {
-    setTimeout(() => panToWithOffset(deckListings[0].lat, deckListings[0].lng, 15, false), 250);
+    setTimeout(() => centerMap(deckListings[0].lat, deckListings[0].lng, 15, false), 250);
   }
 }
 
@@ -985,7 +1006,7 @@ function setupDeckScrollSync() {
       activeDeckIndex = idx;
       document.getElementById('deckCounter').textContent = `${idx + 1} of ${deckListings.length}`;
       const l = deckListings[idx];
-      if (l?.lat && l?.lng) panToWithOffset(l.lat, l.lng, Math.max(map.getZoom(), 15), true);
+      if (l?.lat && l?.lng) centerMap(l.lat, l.lng, Math.max(map.getZoom(), 15), true);
     }, 120);
   };
 }
@@ -1700,7 +1721,6 @@ function openBmcModal() {
 async function bmcConfirm() {
   closeAllModals();
   showToast('Thank you for the coffee! ☕❤️', 'gold', 4000);
-  // Optionally log to Firestore
   try {
     await db.collection('coffees').add({
       userId: currentUser?.uid || null,
@@ -1742,6 +1762,51 @@ function initNetwork() {
   window.addEventListener('online', () => { u(); showToast('Back online', 'success', 1500); loadListings(true); });
   window.addEventListener('offline', () => { u(); showToast('Offline', 'info', 2000); });
   u();
+}
+
+// ==================== DEBUG OVERLAY (triple-tap logo) ====================
+let _debugClicks = 0, _debugTimer = null;
+function bindDebugOverlay() {
+  document.querySelector('.logo-area')?.addEventListener('click', () => {
+    _debugClicks++;
+    clearTimeout(_debugTimer);
+    _debugTimer = setTimeout(() => { _debugClicks = 0; }, 800);
+    if (_debugClicks >= 3) {
+      _debugClicks = 0;
+      const exists = document.getElementById('debugRects');
+      if (!exists) {
+        const box = document.createElement('div');
+        box.id = 'debugRects';
+        box.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:9999;display:block;';
+        box.innerHTML = `
+          <div id="dbgTop" style="position:absolute;left:0;right:0;top:0;background:rgba(239,68,68,.22);border-bottom:2px solid #ef4444;transition:height .2s;"></div>
+          <div id="dbgBottom" style="position:absolute;left:0;right:0;bottom:0;background:rgba(59,130,246,.22);border-top:2px solid #3b82f6;transition:height .2s;"></div>
+          <div id="dbgCenter" style="position:absolute;left:50%;width:22px;height:22px;margin-left:-11px;margin-top:-11px;border:2px solid #10b981;border-radius:50%;transition:top .2s;"></div>
+        `;
+        document.body.appendChild(box);
+        window._debugOn = true;
+      } else {
+        exists.remove();
+        window._debugOn = false;
+        return;
+      }
+      refreshDebugRects();
+      showToast('Debug overlay ON', 'info', 1500);
+    }
+  });
+}
+function refreshDebugRects() {
+  if (!window._debugOn || !map) return;
+  const mapRect = document.getElementById('map').getBoundingClientRect();
+  const { top, bottom } = getMapOverlaySizes();
+  const dbgTop = document.getElementById('dbgTop');
+  const dbgBottom = document.getElementById('dbgBottom');
+  const dbgCenter = document.getElementById('dbgCenter');
+  if (!dbgTop) return;
+  dbgTop.style.height = (mapRect.top + top) + 'px';
+  dbgBottom.style.height = Math.max(0, window.innerHeight - (mapRect.bottom - bottom)) + 'px';
+  const centerY = mapRect.top + top + ((mapRect.height - top - bottom) / 2);
+  dbgCenter.style.top = centerY + 'px';
 }
 
 // ==================== EVENT BINDINGS ====================
@@ -1805,7 +1870,11 @@ function bindEvents() {
     const s = document.getElementById('bottomSheet');
     const expanded = s.classList.toggle('expanded');
     document.body.dataset.sheetExpanded = expanded ? 'true' : 'false';
-    setTimeout(() => { if (map) map.invalidateSize(); }, 320);
+    setTimeout(() => {
+      if (map) map.invalidateSize();
+      if (userLocation) centerMap(userLocation.lat, userLocation.lng, map.getZoom(), false);
+      refreshDebugRects();
+    }, 320);
   });
 
   document.getElementById('publishBtn').onclick = publishListing;
@@ -1813,7 +1882,6 @@ function bindEvents() {
   document.getElementById('savePortfolioBtn').onclick = savePortfolio;
   document.getElementById('bmcThanksBtn').onclick = bmcConfirm;
 
-  // Tab switching in add listing modal
   document.querySelectorAll('#addListingModal .tab').forEach(t => t.addEventListener('click', () => {
     document.querySelectorAll('#addListingModal .tab-pane').forEach(p => p.classList.remove('active'));
     document.getElementById(t.dataset.tab).classList.add('active');
@@ -1821,7 +1889,6 @@ function bindEvents() {
     t.classList.add('active');
   }));
 
-  // Image
   const ua = document.getElementById('imageUploadArea');
   const ii = document.getElementById('imageInput');
   const th = document.getElementById('imagePreviewThumb');
@@ -1837,7 +1904,6 @@ function bindEvents() {
     r.readAsDataURL(f);
   });
 
-  // Location picker
   document.getElementById('openLocationPickerBtn').onclick = () => { pickerContext = 'listing'; startLocationPicker(); };
   document.getElementById('portfolioPickLocationBtn').onclick = () => { pickerContext = 'portfolio'; startLocationPicker(); };
   document.getElementById('confirmPickBtn').onclick = () => {
@@ -1864,7 +1930,6 @@ function bindEvents() {
     pickerContext = 'listing';
   };
 
-  // Portfolio tab switching
   document.querySelectorAll('#portfolioModal .tab').forEach(t => t.addEventListener('click', () => {
     document.querySelectorAll('#portfolioModal .tab-pane').forEach(p => p.classList.remove('active'));
     document.getElementById(t.dataset.tab).classList.add('active');
@@ -1872,7 +1937,6 @@ function bindEvents() {
     t.classList.add('active');
   }));
 
-  // Portfolio skill input
   document.getElementById('pfSkillInput').addEventListener('keydown', e => {
     if (e.key === 'Enter' || e.key === ',') {
       e.preventDefault();
@@ -1884,7 +1948,6 @@ function bindEvents() {
     cb.addEventListener('change', () => cb.closest('.checkbox-item').classList.toggle('checked', cb.checked));
   });
 
-  // BMC coffee options
   document.querySelectorAll('.coffee-opt').forEach(opt => opt.addEventListener('click', () => {
     document.querySelectorAll('.coffee-opt').forEach(o => o.classList.remove('selected'));
     opt.classList.add('selected');
@@ -1903,6 +1966,7 @@ auth.onAuthStateChanged(async user => {
 initMapAndLocation();
 initNetwork();
 bindEvents();
+bindDebugOverlay();
 updateFavBadge();
 loadListings(true);
 </script>
@@ -1915,7 +1979,6 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     function signedIn() { return request.auth != null; }
-
     match /listings/{id} {
       allow read: if true;
       allow create: if signedIn() && request.resource.data.createdBy == request.auth.uid;
@@ -1926,34 +1989,28 @@ service cloud.firestore {
         allow update, delete: if signedIn() && request.auth.uid == resource.data.reviewerId;
       }
     }
-
     match /jobs/{id} {
       allow read: if true;
       allow create: if signedIn() && request.resource.data.createdBy == request.auth.uid;
       allow update, delete: if signedIn() && request.auth.uid == resource.data.createdBy;
     }
-
     match /portfolios/{userId} {
       allow read: if true;
       allow write: if signedIn() && request.auth.uid == userId;
     }
-
     match /applications/{id} {
       allow create: if signedIn() && request.resource.data.userId == request.auth.uid;
       allow read: if signedIn() && resource.data.userId == request.auth.uid;
       allow update, delete: if false;
     }
-
     match /reports/{id} {
       allow create: if true;
       allow read: if false;
     }
-
     match /coffees/{id} {
       allow create: if true;
       allow read: if false;
     }
-
     match /leads/{id} {
       allow create: if true;
       allow read: if signedIn();
